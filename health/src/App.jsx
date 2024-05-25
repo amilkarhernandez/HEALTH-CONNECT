@@ -1,14 +1,15 @@
-import Button from "./components/button";
-import Layaut from "./components/layaut"
-import Navbar from "./components/navbar";
-import Principal from "./components/principal";
+import { Route, Routes } from "react-router-dom"
+import { Login } from "./pages/Login"
+import { Registrar } from "./pages/Registrar"
+
 function App() {
 
-
   return (
-    <div className="h-screen w-screen">
-      <Navbar/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registrar" element={<Registrar />} />
+    </Routes>
   )
 }
 
